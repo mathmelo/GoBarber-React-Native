@@ -1,22 +1,50 @@
 import React from 'react';
-import { SafeAreaView } from 'react-native';
+import { Image } from 'react-native';
 
 import Background from '~/components/Background';
-import Input from '~/components/Input';
-import Button from '~/components/Button';
 
-export default function SignIn() {
+import logo from '~/assets/logo.png';
+
+import {
+  Container,
+  Form,
+  FormInput,
+  SubmitButton,
+  SignLink,
+  SignLinkText,
+} from './styles';
+
+export default function SignIn({ navigation }) {
   return (
-    <SafeAreaView style={{ flex: 1 }}>
-      <Background>
-        <Input
-          style={{ marginTop: 20 }}
-          icon="call"
-          placeholder="Digite seu nome"
-        />
+    <Background>
+      <Container>
+        <Image source={logo} />
 
-        <Button onPress={() => {}}>Entrar</Button>
-      </Background>
-    </SafeAreaView>
+        <Form>
+          <FormInput
+            icon="mail-outline"
+            autoCorrect={false}
+            autoCapitalize="none"
+            placeholder="Digite seu e-mail"
+          />
+
+          <FormInput
+            icon="lock-outline"
+            secureTextEntry
+            placeholder="Sua senha secreta"
+          />
+
+          <SubmitButton onPress={() => {}}>Acessar</SubmitButton>
+        </Form>
+
+        <SignLink
+          onPress={() => {
+            navigation.navigate('SignUp');
+          }}
+        >
+          <SignLinkText>Criar conta gratuita</SignLinkText>
+        </SignLink>
+      </Container>
+    </Background>
   );
 }
