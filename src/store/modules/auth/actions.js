@@ -1,7 +1,7 @@
-export function signInRequest(email, password, navigate) {
+export function signInRequest(email, password) {
   return {
     type: '@auth/SIGN_IN_REQUEST',
-    payload: { email, password, navigate },
+    payload: { email, password },
   };
 }
 
@@ -12,10 +12,10 @@ export function signInSuccess(token, user) {
   };
 }
 
-export default function signUpRequest(name, email, password, navigate) {
+export function signUpRequest(name, email, password) {
   return {
     type: '@auth/SIGN_UP_REQUEST',
-    payload: { name, email, password, navigate },
+    payload: { name, email, password },
   };
 }
 
