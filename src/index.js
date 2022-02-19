@@ -9,9 +9,9 @@ import './config/GestureHandlerLog';
 
 import { store, persistor } from './store';
 
-import Routes from './routes';
+import App from './App';
 
-export default function App() {
+export default function Index() {
   return (
     <Provider store={store}>
       <PersistGate persistor={persistor}>
@@ -19,7 +19,7 @@ export default function App() {
           <GestureHandlerRootView style={{ flex: 1 }}>
             <StatusBar backgroundColor="#7159c1" barStyle="light-content" />
 
-            <Routes />
+            <App />
           </GestureHandlerRootView>
         </SafeAreaView>
       </PersistGate>
