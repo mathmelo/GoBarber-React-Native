@@ -7,12 +7,8 @@ import PropTypes from 'prop-types';
 
 import SignIn from './pages/SignIn';
 import SignUp from './pages/SignUp';
-
-import Dashboard from './pages/Dashboard';
-import DashboardStyles from './pages/Dashboard/navigationOptions';
-
-import Profile from './pages/Profile';
-import ProfileStyles from './pages/Profile/navigationOptions';
+import Dashboard, { dashboardRouteOptions } from './pages/Dashboard';
+import Profile, { profileRouteOptions } from './pages/Profile';
 
 const Stack = createNativeStackNavigator();
 const BottomTab = createBottomTabNavigator();
@@ -42,12 +38,12 @@ export default function Routes({ signedIn }) {
           <BottomTab.Screen
             name="Dashboard"
             component={Dashboard}
-            options={DashboardStyles}
+            options={dashboardRouteOptions}
           />
           <BottomTab.Screen
             name="Profile"
             component={Profile}
-            options={ProfileStyles}
+            options={profileRouteOptions}
           />
         </BottomTab.Navigator>
       )}
