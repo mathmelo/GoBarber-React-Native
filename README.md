@@ -88,7 +88,7 @@ yarn start
 
 ## 📕 License
 
-Read the license [here](https://github.com/mathmelo/GoBarber-React-Native/blob/main/LICENSE).
+Read the license [here](https://github.com/mathmelo/GoBarber-React-Native/blob/develop/LICENSE).
 
 ## 🤓 Author
 
