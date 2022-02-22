@@ -88,7 +88,7 @@ yarn start
 
 ## 📕 License
 
-Read the license [here](https://github.com/mathmelo/GoBarber-React/blob/main/LICENSE).
+Read the license [here](https://github.com/mathmelo/GoBarber-React-Native/blob/main/LICENSE).
 
 ## 🤓 Author
 
@@ -99,5 +99,5 @@ Send me a message! ;)
 <br />
 
 <h4 align="center">
-	🚧  GoBarber 🚀 In construction...  🚧</br>
+	🚧  GoBarber 🚀  🚧</br>
 </h4>
