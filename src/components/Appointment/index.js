@@ -40,7 +40,7 @@ function Appointments({ data, onCancel }) {
 
         <Info>
           <Name>{data.provider.name}</Name>
-          <Time>{dateParsed}</Time>
+          <Time>{data.canceled_at ? 'Cancelado' : dateParsed}</Time>
         </Info>
       </Left>
 

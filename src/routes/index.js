@@ -5,10 +5,12 @@ import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 
 import PropTypes from 'prop-types';
 
-import SignIn from './pages/SignIn';
-import SignUp from './pages/SignUp';
-import Dashboard, { dashboardRouteOptions } from './pages/Dashboard';
-import Profile, { profileRouteOptions } from './pages/Profile';
+import SignIn from '../pages/SignIn';
+import SignUp from '../pages/SignUp';
+import Dashboard, { dashboardRouteOptions } from '../pages/Dashboard';
+import Profile, { profileRouteOptions } from '../pages/Profile';
+
+import ApointmentRoutes, { apointmentRoutesOptions } from './AppointmentRoutes';
 
 const Stack = createNativeStackNavigator();
 const BottomTab = createBottomTabNavigator();
@@ -40,6 +42,13 @@ export default function Routes({ signedIn }) {
             component={Dashboard}
             options={dashboardRouteOptions}
           />
+
+          <BottomTab.Screen
+            name="Agendar"
+            component={ApointmentRoutes}
+            options={apointmentRoutesOptions}
+          />
+
           <BottomTab.Screen
             name="Profile"
             component={Profile}
